@@ -1,7 +1,7 @@
 package com.twitter.poruke;
 
 /**
- * Klasa koja predstavlja twitter poruku
+ * Klasa koja predstavlja <b>twitter poruku</b>
  * 
  * @author Tijana Ninkovic
  * @version 1.0
