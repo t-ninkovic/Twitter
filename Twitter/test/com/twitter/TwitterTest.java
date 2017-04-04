@@ -22,6 +22,17 @@ public class TwitterTest {
 	public void tearDown() throws Exception {
 		t = null;
 	}
+	
+	@Test
+	public void testVratiSvePoruke(){
+		t.unesi("tijana", "abc");
+		t.unesi("leia", "may the force be with you");
+		
+		assertEquals("leia", t.vratiSvePoruke().get(1).getKorisnik());
+		assertEquals("may the force be with you", t.vratiSvePoruke().get(1).getPoruka());
+		assertEquals(2, t.vratiSvePoruke().size());
+		
+	}
 
 	@Test
 	public void testUnesi() {
