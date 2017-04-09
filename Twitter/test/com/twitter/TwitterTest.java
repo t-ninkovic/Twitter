@@ -12,15 +12,18 @@ import org.junit.Test;
 public class TwitterTest {
 	
 	private Twitter t;
+	private TwitterPoruka tp;
 	
 	@Before
 	public void setUp() throws Exception {
 		t = new Twitter();
+		tp = new TwitterPoruka();
 	}
 
 	@After
 	public void tearDown() throws Exception {
 		t = null;
+		tp = null;
 	}
 	
 	@Test
@@ -36,10 +39,17 @@ public class TwitterTest {
 
 	@Test
 	public void testUnesi() {
-		t.unesi("tijana", "random poruka");
 		
-		assertEquals ("tijana", t.vratiSvePoruke().getLast().getKorisnik());
-		assertEquals ("random poruka", t.vratiSvePoruke().getLast().getPoruka());
+		t.unesi("clark kent", "son of krypton");
+		t.unesi("bruce wayne", "bat of gotham");
+		t.unesi("random korisnik", "random poruka");
+		
+		tp.setKorisnik("random korisnik");
+		tp.setPoruka("random poruka");
+		
+		assertEquals (tp.toString(), t.vratiSvePoruke().getLast().toString());
+		assertEquals(3, t.vratiSvePoruke().size());
+		
 	}
 
 	@Test

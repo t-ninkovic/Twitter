@@ -28,7 +28,7 @@ public class TwitterPoruka {
 	 
 	 /**
 	  * Postavlja novu vrednost za atribut korisnik
-	  * @param korisnik
+	  * @param korisnik ime korisnika
 	  * @throws java.lang.RuntimeException ako je uneti string:
 	  * <ul>
 	  * <li>null</li>
@@ -51,7 +51,7 @@ public class TwitterPoruka {
 	 
 	 /**
 	  * Postavlja novu vrednost za atribut poruka
-	  * @param poruka
+	  * @param poruka sadrzaj poruke
 	  * @throws java.lang.RuntimeException ako je uneti string:
 	  * <ul>
 	  * <li>null</li>
